@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Example</title>
+</head>
+<body>
+    <h1>Counter Example</h1>
+
+    <script>
+        function createCounter() {
+            let count = 0; // This variable is part of the lexical scope of createCounter
+
+            return function() {
+                // This inner function forms a closure
+
+                // Replace 'sok dara' with your full name
+                console.log('Student Name: Eksaran Phaoserylaksmi'); // Update with your full name
+
+                count++; // It remembers and accesses the count variable from its parent's scope
+                return count;
+            }
+        }
+
+        // Create a counter instance
+        const counter = createCounter();
+
+        // Call the counter and log the results
+        console.log(counter()); // Output: 1
+        console.log(counter()); // Output: 2
+        console.log(counter()); // Output: 3
+
+    </script>
+</body>
+</html>

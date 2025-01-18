@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Strict Mode and Error Handling</h1>
+
+    <script>
+        'use strict';
+
+        try {
+            // Replace 'sok dara' with your full name
+            console.log('Student name: Eksaran Phaoserylaksmi'); // Replace with your actual name
+            let x = 10; // Declare x using let
+        } catch (error) {
+            console.error(error.message); // Output: 'x is not defined'
+        }
+
+        function demo() {
+            try {
+                let y = 20; // Declare y using let
+            } catch (error) {
+                console.error(error.message); // Output: 'y is not defined'
+            }
+        }
+
+        demo();
+
+        try {
+            eval('var z = 50; delete z;'); // This will run successfully
+        } catch (error) {
+            console.error(error.message); // Output: 'Cannot delete property 'z' of #<Object>'
+        }
+    </script>
+</body>
+</html>
